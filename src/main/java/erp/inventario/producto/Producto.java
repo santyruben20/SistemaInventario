@@ -2,7 +2,6 @@ package erp.inventario.producto;
 
 import java.math.BigDecimal;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

@@ -18,6 +18,6 @@ private long id;
 private String nombre;
 private String direccion;
 private int telefono;
-private String correo_electronico;
+private String correoElectronico;
 
 }
