@@ -3,7 +3,6 @@ package erp.inventario.producto;
 import java.math.BigDecimal;
 
 import erp.inventario.categoria.Categoria;
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +20,6 @@ public class Producto {
     private String descripcion;
     private BigDecimal precio;
 
-    @ManyToOne
-    private Categoria idCategoria;
+    
 
 }

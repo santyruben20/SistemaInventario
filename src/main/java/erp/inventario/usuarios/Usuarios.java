@@ -2,11 +2,12 @@ package erp.inventario.usuarios;
 
 import java.math.BigDecimal;
 
-import jakarta.annotation.Generated;
+import erp.inventario.roles.Roles;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
@@ -16,7 +17,9 @@ public class Usuarios {
 @GeneratedValue(strategy = GenerationType.AUTO)
 private long id;
 private String nombre;
-private String correo_electronico;
+private String correoElectronico;
 private String contraseña;
 
+@ManyToOne
+private Roles idRoles;
 }

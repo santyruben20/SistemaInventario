@@ -43,7 +43,7 @@ public Roles update (@RequestBody Roles entity){
 }
 
 //delete
-@DeleteMapping("/{id}/")
+@DeleteMapping("/")
 public void deeteById(@PathVariable long id){
     service.deleteById(id);
 }
