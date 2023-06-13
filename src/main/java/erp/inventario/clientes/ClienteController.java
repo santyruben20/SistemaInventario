@@ -3,6 +3,7 @@ package erp.inventario.clientes;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,13 +25,14 @@ public class ClienteController {
 ClienteService service;
 
 //Get
-
+@PreAuthorize("hasAuthority('Clientes_leerTodos')")
 @GetMapping("/")
 public List<Cliente> findAll(){
 return service.findAll();
 }
 
 //Create
+@PreAuthorize("hasAuthority('Cliente')")
 @PostMapping("/")
 public Cliente save (@RequestBody Cliente entity){
     return service.save(entity);

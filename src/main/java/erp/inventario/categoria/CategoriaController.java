@@ -26,11 +26,13 @@ CategoriaService service;
 //Get
 
 @GetMapping("/")
+
 public List<Categoria> findAll(){
 return service.findAll();
 }
 
 //Create
+
 @PostMapping("/")
 public Categoria save (@RequestBody Categoria entity){
     return service.save(entity);
